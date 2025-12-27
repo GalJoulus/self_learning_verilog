@@ -1,0 +1,14 @@
+sim/
+gtk/
+
+Ignore waveform files
+*.vcd
+
+Ignore compiled simulation binaries
+*.out
+*.exe
+
+Ignore temporary editor files
+*~
+*.swp
+*.bak
