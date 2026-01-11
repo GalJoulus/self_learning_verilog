@@ -53,7 +53,6 @@ The architecture emphasizes:
 | 🔘 **Button Debouncing** | Hardware-grade signal conditioning for mechanical buttons |
 | ⏸️ **Pause/Resume** | Full stop and continue functionality |
 | 🔒 **Auto-Lock** | System locks when max time (59:59:99) is reached |
-| ⚡ **Parameterized** | Easy adaptation for simulation vs. synthesis |
 
 ---
 
@@ -202,6 +201,7 @@ stateDiagram-v2
 The project follows a **bottom-up verification strategy**:
 
 ### Unit Tests
+- ✅ `stopwatch_tb.v` - Validates the timing datapath and cascaded counter logic
 - ✅ `counter_tb.v` - Validates counting and overflow behavior
 - ✅ `debounce_tb.v` - Simulates noisy button input
 - ✅ `FSM_tb.v` - Verifies state transition graph
@@ -214,11 +214,7 @@ The project follows a **bottom-up verification strategy**:
 
 All testbenches are **self-checking** and output `PASS/FAIL` status.
 
----
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
